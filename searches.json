@@ -1,0 +1,27 @@
+{
+    "previous":
+    {
+        "name":["test", "test2"],
+        "address":["3345 ha st","4444 Halla rd"],
+        "zip":["98075", "66666"],
+        "bedrooms":[4,3],
+        "bathrooms":[1,2],
+        "floors":[2,2],
+        "sqft":[1000, 1001],
+        "info":["this is some text to test", "this is a new thing"],
+        "value":[245900,199000]
+    },
+    "current":
+    {
+        "name":["test"],
+        "address":["3345 ha st"],
+        "zip":["98075"],
+        "bedrooms":[4],
+        "bathrooms":[1],
+        "floors":[2],
+        "sqft":[1000],
+        "info":["this is some text to test"],
+        "value":[245900]
+
+    }
+}
