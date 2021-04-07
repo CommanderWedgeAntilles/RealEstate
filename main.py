@@ -2,11 +2,8 @@ import PySimpleGUI as sg
 import os.path
 import json
 import numpy as np
-from np import array
-#import Home
-#import EES
-#import EPS
-#import DES
+from numpy import array
+from numpy import empty
 
 
 def home():
@@ -42,7 +39,7 @@ def EES():
 
     with open('searches.json') as json_file:
         data = json.load(json_file)
-    print(data)
+    #print(data)
 
     name = data['previous']['name']
     value = data['previous']['value']
@@ -57,17 +54,15 @@ def EES():
             return [sg.Text(name[y]), sg.Text(value[y]), sg.Text(address[y])]
 
     def search(y):
-        for x in range(0,l):
-            a = array([0,0])
-            a[x] = (str(name[x])+ " " + str(value[x]) + " " + str(address[x]))
-            return a
-    
-    searched = search(l)
+        for x in range(0,y):
+            return str(name[y]) + str(" - ") + str(value[y])
+    #this is not working
+
 
     layout = []
     layout += [[sg.Button("Back")], [sg.Text("Previous Evaluation", size=(40,5))]]
     layout += [searchList(x) for x in range(0,l)]
-    layout += [[sg.Combo(searched)],[sg.Button("View Selected")]]
+    layout += [[sg.Combo([search(x) for x in range(0,l)],size=(30,1))],[sg.Button("View Selected")]]
 
     window2=sg.Window("Previous Evaluation",layout)
 
@@ -79,8 +74,11 @@ def EES():
         if event == "Back":
             home()
             break
+        if event =="View Selected":
+            #change the current to the selected value
+            DES(1)
+            break
     window2.close()
-    print("worked")
     return 
 
 def DES(x):
