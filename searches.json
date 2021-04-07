@@ -9,7 +9,10 @@
         "floors":[2,2],
         "sqft":[1000, 1001],
         "info":["this is some text to test", "this is a new thing"],
-        "value":[245900,199000]
+        "value":[245900,199000],
+        "loan":[0,0],
+        "tax":[0,0],
+        "total":[0,0]
     },
     "current":
     {
@@ -17,11 +20,15 @@
         "address":["3345 ha st"],
         "zip":["98075"],
         "bedrooms":[4],
-        "bathrooms":[1],
-        "floors":[2],
-        "sqft":[1000],
+        "bathrooms":[1.75],
+        "floors":[1],
+        "sqft":[1900],
         "info":["this is some text to test"],
-        "value":[245900]
+        "value":[],
+        "loan":[],
+        "tax":[],
+        "total":[]
 
     }
 }
+       
