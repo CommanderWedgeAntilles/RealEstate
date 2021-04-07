@@ -16,9 +16,8 @@ info = data['current']['info']
 
 
 
-#frame1=[]
 info=[[sg.Text(bedroom[0]), sg.Text(bathroom[0])], [sg.Text(floor[0]), sg.Text(sqft[0])], [sg.Text(info[0])]]
-#frame2=[]
+
 valueInfo=[[sg.Text(value[0])],
 [sg.Text('loan estimate')],
 [sg.Text('tax estimate')],

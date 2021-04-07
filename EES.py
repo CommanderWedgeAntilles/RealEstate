@@ -3,7 +3,6 @@ import os.path
 import json
 
 
-
 with open('searches.json') as json_file:
     data = json.load(json_file)
 print(data)
@@ -32,5 +31,6 @@ while True:
     if event == sg.WIN_CLOSED:
         break
     if event == "Back":
+        
         break
 window.close()
